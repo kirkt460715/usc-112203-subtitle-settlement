@@ -1,0 +1,22 @@
+{
+  "segments": {
+    "rows": 48,
+    "sha256": "b6026a2fd5e4e01021513082588d8b1def5080ba880054af7f8fd82243892632"
+  },
+  "deliveries": {
+    "rows": 289,
+    "sha256": "fcdfeabdec33a13217fc2a74a1e84773b1de069861305e112978e93269f7d97c"
+  },
+  "checks": {
+    "rows": 125,
+    "sha256": "20fe8e07d1be8d385b943cf587a4d486a3a45df1e83325153a1db9cd31b784cd"
+  },
+  "contracts": {
+    "rows": 3,
+    "sha256": "5fdad3fde0e1f703667a9ef4a69a8aa751efd8822d8d9d1234201bf1af2d8885"
+  },
+  "claims": {
+    "rows": 3,
+    "sha256": "ca4e0e9177bb770ac40d6ad3c436afda4a8759ba2aac04353ac63bdb02031b5e"
+  }
+}

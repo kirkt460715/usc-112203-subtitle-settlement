@@ -1,0 +1,3 @@
+{"id":"X1","delivery":"T14-es-first","period":1,"party":"es-text","claimed_cents":300,"paid_cents":200,"status":"partly_paid","evidence":["Q-T14-es-first"]}
+{"id":"X2","delivery":"T14-es-first","period":2,"party":"es-render","claimed_cents":300,"paid_cents":0,"status":"disputed","evidence":["T14-es-first-R2"]}
+{"id":"X3","delivery":"T07-pt-first","period":2,"party":"pt-text","claimed_cents":100,"paid_cents":0,"status":"open","evidence":["C-T07-pt-first"]}
