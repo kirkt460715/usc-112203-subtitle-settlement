@@ -1,0 +1,3 @@
+{"id":"A1","claims":["X1","X2"],"group":"G-EU","delivery":"T14-es-first","possible_world":"origin-es","party":"terms-A","viewers":226,"status":"pending"}
+{"id":"A2","claims":["X2"],"group":"G-EU","delivery":"T14-es-first","possible_world":"origin-es","party":"es-render","viewers":226,"status":"pending"}
+{"id":"A3","claims":[],"group":"G-EU","delivery":"T14-pt-first","possible_world":"origin-pt","party":"pt-render","viewers":201,"status":"confirmed"}

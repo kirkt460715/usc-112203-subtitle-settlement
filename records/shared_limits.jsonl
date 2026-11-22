@@ -1,0 +1,2 @@
+{"id":"L1","group":"G-EU","period":1,"channels":["T14-es-first","T14-pt-first"],"ceiling_cents":440,"claim_holds_cents":180,"already_paid_cents":200,"closed":true}
+{"id":"L2","group":"G-EU","period":2,"channels":["T14-es-first","T14-pt-first"],"ceiling_cents":440,"claim_holds_cents":180,"already_paid_cents":90,"closed":false}

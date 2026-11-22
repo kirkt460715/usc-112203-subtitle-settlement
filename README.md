@@ -11,6 +11,9 @@ records 保存可离线使用的合成业务记录。每行一个 UTF-8 JSON 对
 | checks.jsonl | 计划抽样包含纳入概率，客诉不是概率样本。 |
 | contracts.jsonl | 同一内容在同一可见范围的坏时长扣减有上限。明示采用结算货币分与毫秒。 |
 | claims.jsonl | 反证与争议款，期间 1 已关账，期间 2 开放。 |
+| terminology.jsonl | 同一术语表覆盖多个语言渠道。反馈时间由各频道接收设备提供。 |
+| shared_limits.jsonl | 同一 delivery group 的扣减共用额度，争议占用与已清算金额按期提供。 |
+| counterclaims.jsonl | possible_world 指责任主张互斥组；同时发生的独立主张以不同组给出。 |
 
 ## 核对资料
 

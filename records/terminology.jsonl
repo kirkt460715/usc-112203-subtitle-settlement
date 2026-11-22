@@ -1,0 +1,4 @@
+{"id":"G1","group":"G-EU","segment":"T14","language":"es","channel":"first","vendor":"terms-A","version":"initial","visible_viewers":304,"sent":"2026-10-28T17:07:00+00:00","received":"2026-10-28T17:08:00+00:00"}
+{"id":"G2","group":"G-EU","segment":"T14","language":"pt","channel":"first","vendor":"terms-A","version":"initial","visible_viewers":201,"sent":"2026-10-28T17:07:00+00:00","received":"2026-10-28T17:08:00+00:00"}
+{"id":"G3","supersedes":"G1","group":"G-EU","segment":"T14","language":"es","channel":"first","vendor":"terms-A","version":"corrected","visible_viewers":226,"sent":"2026-10-28T17:10:00+00:00","received":"2026-10-28T17:11:00+00:00"}
+{"id":"G4","supersedes":"G2","group":"G-EU","segment":"T14","language":"pt","channel":"first","vendor":"terms-A","version":"corrected","visible_viewers":201,"sent":"2026-10-28T17:10:00+00:00","received":"2026-10-28T17:15:00+00:00"}

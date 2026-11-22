@@ -18,5 +18,17 @@
   "claims": {
     "rows": 3,
     "sha256": "5cc569a6398a546e74d3e381dc88caae2e6b89e546a8867f8bd43b1abb1fc5bf"
+  },
+  "terminology": {
+    "rows": 4,
+    "sha256": "093322738cd54e61ae188798b9922a83374da34feecb1def680be81803e1871f"
+  },
+  "shared_limits": {
+    "rows": 2,
+    "sha256": "0d683a02076908841defa3d349f6f8951405bbccc2a9c0dc85028b946045d6d8"
+  },
+  "counterclaims": {
+    "rows": 3,
+    "sha256": "5397150ba35f171e61a5bc758c4b9ea37ac7dd40671c876aadae24f3fbe96bd4"
   }
 }
