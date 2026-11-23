@@ -1,0 +1,111 @@
+# 字幕交付复核报告
+
+## 1. 可核实样本覆盖（客诉不外推）
+- es: 总体 97 条，计划抽样 48 条（inclusion=0.5，强度 strong），仅客诉 3 条，无任何抽查 46 条；有概率样本的赛段=decider,match,opening，缺概率样本的赛段=
+- ja: 总体 96 条，计划抽样 24 条（inclusion=0.3333333333333333，强度 partial），仅客诉 5 条，无任何抽查 67 条；有概率样本的赛段=decider,opening，缺概率样本的赛段=match
+- pt: 总体 96 条，计划抽样 32 条（inclusion=0.3333333333333333，强度 partial），仅客诉 4 条，无任何抽查 60 条；有概率样本的赛段=decider,opening，缺概率样本的赛段=match
+
+## 2. 账期复核结论
+### 期间 1（已关账（只读））
+- 本期待签发 0 分；留争议 100 分
+- 共同上限组 G-EU: 上限 440，争议预留 180，已清算 200，本期签发 0，剩余额度 60 分
+- X1（T14-es-first / es-text）：关账冻结，主张 300，可确认 200，本期签发 0；缺陷口径=critical_term_error,lateness
+    - 期间已关账：单据冻结，不按新证据改写已关期金额
+### 期间 2（开放）
+- 本期待签发 100 分；留争议 300 分
+- 共同上限组 G-EU: 上限 440，争议预留 180，已清算 90，本期签发 0，剩余额度 170 分
+- X2（T14-es-first / es-render）：留争议款，主张 300，可确认 400，本期签发 0；缺陷口径=critical_term_error,lateness
+    - 互斥责任世界 origin-es 内有 2 个待决反证（A1, A2），责任边界未拆开前不得结算
+- X3（T07-pt-first / pt-text）：可结算，主张 100，可确认 200，本期签发 100；缺陷口径=content_wrong,lateness
+
+## 3. 下一开放账期更正计划
+- 新签发 100；释放争议预留 400；减少上期支付 0；已被其它凭证占用 850（单位：分）
+- [already_occupied] X1 / T14-es-first 200 分（frozen=True）：关账期已支付部分保持不动；若新证据改变责任边界，只能在开放期以争议更正处理，不回改旧单据
+- [release_hold] X1 / T14-es-first 100 分（frozen=False）：关账期未付余额随争议款带入开放期，待互斥反证拆开后释放
+- [release_hold] X2 / T14-es-first 300 分（frozen=False）：争议预留保留；收到明确分工反证后按确认结果释放或退回
+- [new_issue] X3 / T07-pt-first 100 分（frozen=False）：开放期可独立确认的扣减，按共同上限剩余额度签发
+- [already_occupied] @L1 / T14-es-first,T14-pt-first 380 分（frozen=True）：组 G-EU 共同上限 440 分中已被争议预留 180 分与已清算 200 分占用
+- [already_occupied] @L2 / T14-es-first,T14-pt-first 270 分（frozen=False）：组 G-EU 共同上限 440 分中已被争议预留 180 分与已清算 90 分占用
+
+## 4. 已证实但暂无扣减单的缺陷（只报告，不自动扣款）
+- T05-es-replay lateness 潜在 100 分，证据 Q-T05-es-replay
+- T05-ja-replay lateness 潜在 100 分，证据 Q-T05-ja-replay
+- T05-pt-replay lateness 潜在 100 分，证据 Q-T05-pt-replay
+- T06-es-first lateness 潜在 100 分，证据 Q-T06-es-first
+- T06-ja-first lateness 潜在 100 分，证据 Q-T06-ja-first
+- T06-pt-first lateness 潜在 100 分，证据 Q-T06-pt-first
+- T07-es-first content_wrong 潜在 100 分，证据 C-T07-es-first
+- T07-es-first lateness 潜在 100 分，证据 C-T07-es-first
+- T07-es-replay content_wrong 潜在 100 分，证据 Q-T07-es-replay
+- T07-es-replay lateness 潜在 100 分，证据 Q-T07-es-replay
+- T07-ja-first content_wrong 潜在 100 分，证据 C-T07-ja-first
+- T07-ja-first lateness 潜在 100 分，证据 C-T07-ja-first
+- T08-es-first lateness 潜在 100 分，证据 Q-T08-es-first
+- T08-pt-replay lateness 潜在 100 分，证据 Q-T08-pt-replay
+- T11-es-replay omission 潜在 100 分，证据 Q-T11-es-replay
+- T11-ja-replay omission 潜在 100 分，证据 Q-T11-ja-replay
+- T11-pt-replay omission 潜在 100 分，证据 Q-T11-pt-replay
+- T14-es-first-R2 critical_term_error 潜在 300 分，证据 Q-T14-es-first,C-T14-es-first
+- T14-es-first-R2 lateness 潜在 100 分，证据 Q-T14-es-first,C-T14-es-first
+- T14-ja-first content_wrong 潜在 100 分，证据 C-T14-ja-first
+- T14-ja-first lateness 潜在 100 分，证据 C-T14-ja-first
+- T14-ja-replay content_wrong 潜在 100 分，证据 Q-T14-ja-replay
+- T14-ja-replay lateness 潜在 100 分，证据 Q-T14-ja-replay
+- T14-pt-first critical_term_error 潜在 300 分，证据 C-T14-pt-first
+- T14-pt-first lateness 潜在 100 分，证据 C-T14-pt-first
+- T14-pt-replay critical_term_error 潜在 300 分，证据 Q-T14-pt-replay
+- T14-pt-replay lateness 潜在 100 分，证据 Q-T14-pt-replay
+- T15-es-replay lateness 潜在 100 分，证据 Q-T15-es-replay
+- T15-ja-first lateness 潜在 100 分，证据 Q-T15-ja-first
+- T15-pt-first lateness 潜在 100 分，证据 Q-T15-pt-first
+- T16-es-first lateness 潜在 100 分，证据 Q-T16-es-first
+- T17-es-replay lateness 潜在 100 分，证据 Q-T17-es-replay
+- T17-ja-replay lateness 潜在 100 分，证据 Q-T17-ja-replay
+- T17-pt-replay lateness 潜在 100 分，证据 Q-T17-pt-replay
+- T21-es-first content_wrong 潜在 100 分，证据 C-T21-es-first
+- T21-es-replay content_wrong 潜在 100 分，证据 Q-T21-es-replay
+- T21-ja-first content_wrong 潜在 100 分，证据 Q-T21-ja-first,C-T21-ja-first
+- T21-pt-first content_wrong 潜在 100 分，证据 Q-T21-pt-first,C-T21-pt-first
+- T22-es-first omission 潜在 100 分，证据 Q-T22-es-first
+- T23-es-replay lateness 潜在 100 分，证据 Q-T23-es-replay
+- T23-ja-replay lateness 潜在 100 分，证据 Q-T23-ja-replay
+- T23-pt-replay lateness 潜在 100 分，证据 Q-T23-pt-replay
+- T24-es-first lateness 潜在 100 分，证据 Q-T24-es-first
+- T24-pt-first lateness 潜在 100 分，证据 Q-T24-pt-first
+- T25-es-replay lateness 潜在 100 分，证据 Q-T25-es-replay
+- T26-es-first lateness 潜在 100 分，证据 Q-T26-es-first
+- T26-ja-replay lateness 潜在 100 分，证据 Q-T26-ja-replay
+- T26-pt-replay lateness 潜在 100 分，证据 Q-T26-pt-replay
+- T28-es-first content_wrong 潜在 100 分，证据 Q-T28-es-first,C-T28-es-first
+- T28-ja-first content_wrong 潜在 100 分，证据 C-T28-ja-first
+- T28-pt-first content_wrong 潜在 100 分，证据 C-T28-pt-first
+- T32-es-first lateness 潜在 100 分，证据 Q-T32-es-first
+- T32-pt-replay lateness 潜在 100 分，证据 Q-T32-pt-replay
+- T33-es-replay omission 潜在 100 分，证据 Q-T33-es-replay
+- T33-ja-first omission 潜在 100 分，证据 Q-T33-ja-first
+- T33-pt-first omission 潜在 100 分，证据 Q-T33-pt-first
+- T34-es-first lateness 潜在 100 分，证据 Q-T34-es-first
+- T35-es-first content_wrong 潜在 100 分，证据 C-T35-es-first
+- T35-es-first lateness 潜在 100 分，证据 C-T35-es-first
+- T35-es-replay content_wrong 潜在 100 分，证据 Q-T35-es-replay
+- T35-es-replay lateness 潜在 100 分，证据 Q-T35-es-replay
+- T35-ja-first content_wrong 潜在 100 分，证据 C-T35-ja-first
+- T35-ja-first lateness 潜在 100 分，证据 C-T35-ja-first
+- T35-ja-replay content_wrong 潜在 100 分，证据 Q-T35-ja-replay
+- T35-ja-replay lateness 潜在 100 分，证据 Q-T35-ja-replay
+- T35-pt-first content_wrong 潜在 100 分，证据 C-T35-pt-first
+- T35-pt-first lateness 潜在 100 分，证据 C-T35-pt-first
+- T35-pt-replay content_wrong 潜在 100 分，证据 Q-T35-pt-replay
+- T35-pt-replay lateness 潜在 100 分，证据 Q-T35-pt-replay
+- T41-es-replay lateness 潜在 100 分，证据 Q-T41-es-replay
+- T41-ja-replay lateness 潜在 100 分，证据 Q-T41-ja-replay
+- T41-pt-replay lateness 潜在 100 分，证据 Q-T41-pt-replay
+- T42-es-first content_wrong 潜在 100 分，证据 Q-T42-es-first,C-T42-es-first
+- T42-es-first lateness 潜在 100 分，证据 Q-T42-es-first,C-T42-es-first
+- T42-ja-first content_wrong 潜在 100 分，证据 Q-T42-ja-first,C-T42-ja-first
+- T42-ja-first lateness 潜在 100 分，证据 Q-T42-ja-first,C-T42-ja-first
+- T42-pt-first content_wrong 潜在 100 分，证据 Q-T42-pt-first,C-T42-pt-first
+- T42-pt-first lateness 潜在 100 分，证据 Q-T42-pt-first,C-T42-pt-first
+- T43-es-replay lateness 潜在 100 分，证据 Q-T43-es-replay
+- T44-es-first omission 潜在 100 分，证据 Q-T44-es-first
+- T44-pt-replay omission 潜在 100 分，证据 Q-T44-pt-replay

@@ -18,3 +18,12 @@ records 保存可离线使用的合成业务记录。每行一个 UTF-8 JSON 对
 ## 核对资料
 
 运行环境为 Python 3.11，使用标准库，无需下载依赖。用 `python3 -m unittest discover -s tests -v` 核对发行资料的完整性与约定的输入关系。
+
+## 复核引擎
+
+`subtitle_qc/` 在上述记录上实现观众体验度量与采购争议复核（规则与可回查链路见
+`subtitle_qc/DESIGN.md`）：
+
+- `python3 -m subtitle_qc.reporting --records records --out reports --json` 全项目复核；
+- `python3 -m subtitle_qc.reporting --records records --delivery T14-es-first` 沿单条播出凭证回看版本链、证据、判责与资金动作；
+- 引擎只读 `records/`，加载时按 catalog 校验 sha256 与行数，不回写业务数据。
